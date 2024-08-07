@@ -4,8 +4,20 @@ import eventModel from "./src/models/events.js";
 import connectDb from "./src/config/db.js";
 import Groq from "groq-sdk";
 import { message } from "telegraf/filters";
+import express from "express";
 
 import dotenv from "dotenv";
+
+const app = express();
+
+app.get("/", (req, res) => {
+  // console.log("Bot is running...");
+  res.send("Bot is running...");
+});
+
+app.listen(5000, () => {
+  console.log(`Server running at http://localhost:${5000}`);
+});
 
 dotenv.config();
 
