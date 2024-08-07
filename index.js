@@ -1,12 +1,12 @@
-import { Telegraf } from "telegraf";
-import userModel from "./src/models/User.js";
-import eventModel from "./src/models/events.js";
-import connectDb from "./src/config/db.js";
-import Groq from "groq-sdk";
-import { message } from "telegraf/filters";
-import express from "express";
+const { Telegraf } = require("telegraf");
+const userModel = require("./src/models/User");
+const eventModel = require("./src/models/events");
+const connectDb = require("./src/config/db");
+const Groq = require("groq-sdk");
+const { message } = require("telegraf/filters");
+const dotenv = require("dotenv");
 
-import dotenv from "dotenv";
+const express = require("express");
 
 const app = express();
 

@@ -1,6 +1,6 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
-export default () => {
+module.exports = () => {
   return mongoose
     .connect(process.env.MONGO_CONNECT_URL, {
       dbName: "MediaBot",
