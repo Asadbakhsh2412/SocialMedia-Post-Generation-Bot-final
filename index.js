@@ -4,6 +4,7 @@ import eventModel from "./src/models/events.js";
 import connectDb from "./src/config/db.js";
 import Groq from "groq-sdk";
 import { message } from "telegraf/filters";
+
 import dotenv from "dotenv";
 
 dotenv.config();
